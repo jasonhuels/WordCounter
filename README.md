@@ -10,16 +10,16 @@ _A console application that gathers both a word and sentence from a user, then c
 
 ## Specifications
 
-| Behavior | Input | Output|
-|:------|:---------:|:------:|
-| User enters word to match with no matches | "I", "This is a test sentence." | 0 |
-| User enters a single letter word to match and matches exist  | "a", "This is a test sentence." | 1 | 
-| User enters a multi-character word to match with matches | "test", "This is a test sentence."| 1 |
-| Program can find multiple instances of the test word | "is", "This is a test sentence. It is just for testing." | 2 |
-| Program ignores case when finding matches | "this", "This is a test sentence." | 1 |
-| Program ignores partial matches in words | "test", "This is a test sentence. It is just for testing." | 1 |
-| Program ignores punctuation when finding matches | "sentence", "This is a test sentence." | 1 |
-| Program will find plural and singular versions of the word | "test", "This is a test sentence, it tests sentences.| 2 |
+| Completed | Behavior | Input | Output|
+|:-|:------|:---------:|:------:|
+- [X] | User enters word to match with no matches | "I", "This is a test sentence." | 0 |
+- [X] | User enters a single letter word to match and matches exist  | "a", "This is a test sentence." | 1 | 
+- [X] | User enters a multi-character word to match with matches | "test", "This is a test sentence."| 1 |
+- [X] | Program can find multiple instances of the test word | "is", "This is a test sentence. It is just for testing." | 2 |
+- [X] | Program ignores case when finding matches | "this", "This is a test sentence." | 1 |
+- [] | Program ignores partial matches in words | "test", "This is a test sentence. It is just for testing." | 1 |
+- [] | Program ignores punctuation when finding matches | "sentence", "This is a test sentence." | 1 |
+- [] | Program will find plural and singular versions of the word | "test", "This is a test sentence, it tests sentences.| 2 |
 
 ## Setup/Installation Requirements_
 

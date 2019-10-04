@@ -18,7 +18,7 @@ namespace WordCounter
             string[] wordArr = Sentence.Split(" ");
             for(int i=0; i<wordArr.Length; i++)
             {
-                if(wordArr[i] == Word)
+                if(wordArr[i].ToLower() == Word.ToLower())
                 {
                     count++;
                 }
