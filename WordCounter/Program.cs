@@ -17,6 +17,7 @@ public class Program
         string[] textFromFile;
         string[] sentenceSplit;
         int guess = 0;
+        char[] charsToTrim = { ',', '.', '\'', '\"', ' ' };
 
         while(repeat)
         {
@@ -28,6 +29,10 @@ public class Program
                 {
                     game = true;
                 }
+                else
+                {
+                    game = false;
+                }
             }
             while (gameOrCount.ToLower() != "game" && gameOrCount.ToLower() != "count");
             
@@ -35,14 +40,15 @@ public class Program
             {
                 textFromFile = System.IO.File.ReadAllLines(@"./text.txt");
                 Random rand = new Random();
-                int randomIndex = rand.Next(0, textFromFile.Length-1);
+                int randomIndex = rand.Next(0, textFromFile.Length);
                 sentenceToCheck = textFromFile[randomIndex];
                 sentenceSplit = sentenceToCheck.Split(" ");
-                randomIndex = rand.Next(0, sentenceSplit.Length-1);
-                wordToFind = sentenceSplit[randomIndex];
-                Console.WriteLine($"You have 10 seconds to count the occurances of the word: {wordToFind}");
+                randomIndex = rand.Next(0, sentenceSplit.Length);
+                wordToFind = sentenceSplit[randomIndex].ToLower().Trim(charsToTrim);
+                Console.Clear();
+                Console.WriteLine($"You have 5 seconds to count the occurances of the word: {wordToFind}");
                 Console.WriteLine(sentenceToCheck);
-                Thread.Sleep(10000);
+                Thread.Sleep(5000);
                 Console.Clear();
                 do
                 {
@@ -53,10 +59,12 @@ public class Program
                 counter = new RepeatCounter(wordToFind, sentenceToCheck);
                 if(guess == counter.CountWords())
                 {
+                    Console.WriteLine($"You guessed {guess}, the correct answer is {counter.CountWords()}.");
                     Console.WriteLine("You Win!");
                 }
                 else 
                 {
+                    Console.WriteLine($"You guessed {guess}, the correct answer is {counter.CountWords()}.");
                     Console.WriteLine("You Lose!");
                 }      
             }
@@ -85,12 +93,12 @@ public class Program
             {
                 Console.WriteLine("\nWould you like to check another sentence? (y/n)");
                 yOrN = Console.ReadLine();
-                if(yOrN.ToLower()[0] == 'n')
+                if (yOrN.ToLower() == "n")
                 {
                     repeat = false;
                 }
             }
-            while(yOrN.ToLower()[0] != 'n' && yOrN.ToLower()[0] != 'y');
+            while(yOrN.ToLower() != "y" && yOrN.ToLower() != "n");
         }      
     }
 }

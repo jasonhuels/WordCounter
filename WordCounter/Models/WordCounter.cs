@@ -17,14 +17,16 @@ namespace WordCounter
             int count = 0;
             char[] charsToTrim = {',', '.', '\'', '\"', ' '};
             string[] wordArr = Sentence.Split(" ");
+            string cleanWord;
             for(int i=0; i<wordArr.Length; i++)
             {
-                if(wordArr[i].ToLower().Trim(charsToTrim) == Word.ToLower())
+                cleanWord = wordArr[i].ToLower().Trim(charsToTrim);
+                if(cleanWord == Word.ToLower())
                 {
                     count++;
                 }
                 // Check for Plural versions of the word, ignore single character words
-                else if (Word.Length > 1 && (wordArr[i].ToLower().Trim(charsToTrim) == Word.ToLower() + "s" || wordArr[i].ToLower().Trim(charsToTrim) == (Word.ToLower() + "\'s")))
+                else if (Word.Length > 1 && (cleanWord == Word.ToLower() + "s" || cleanWord == (Word.ToLower() + "\'s")))
                 {
                     count++;
                 }
