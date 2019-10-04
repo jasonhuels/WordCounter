@@ -6,7 +6,7 @@
 
 ## Description
 
-_A console application that gathers both a word and sentence from a user, then checks how frequently the word appears in the sentence. The program should ignore partial matches in words._
+_A console application that gathers both a word and sentence from a user, then checks how frequently the word appears in the sentence. The program should ignore partial matches in words. Alternately, the user can choose to play a game in which the program will pick a random sentence from the text.txt file and a word from that sentence. The user will have 5 seconds to correctly identify the count of the word in that sentence._
 
 ## Specifications
 

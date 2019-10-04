@@ -31,6 +31,7 @@ namespace WordGame
 
             Console.Clear();
             Console.WriteLine($"You have 5 seconds to count the occurances of the word: {wordToFind}");
+            Thread.Sleep(1500);
             Console.WriteLine(sentenceToCheck);
             Thread.Sleep(5000);
             Console.Clear();
