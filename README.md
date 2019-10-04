@@ -39,6 +39,9 @@ _jasonhuels@yahoo.com_
 
 _C#, .NET_
 
+## Github Repo
+https://github.com/jasonhuels/WordCounter
+
 ### License
 
 *open source*

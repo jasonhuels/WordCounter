@@ -40,7 +40,6 @@ public class Program
                 }
             }
             while(yOrN.ToLower()[0] != 'n' && yOrN.ToLower()[0] != 'y');
-        }
-        
+        }      
     }
 }
