@@ -21,8 +21,6 @@ _A console application that gathers both a word and sentence from a user, then c
 | Program ignores punctuation when finding matches | "sentence", "This is a test sentence." | 1 |
 | Program will find plural and singular versions of the word | "test", "This is a test sentence, it tests sentences.| 2 |
 
-
-
 ## Setup/Installation Requirements_
 
 * _Clone this repository_
